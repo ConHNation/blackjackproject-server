@@ -1,13 +1,17 @@
-# Blackjack - CSP Project
+# Blackjack - Server (Back-end) Program
+# CSP Final Project
 # Made by Connor Hayden, Dylan Lovell, Mateus and all the other nerds idfk
 
 # dependencies
 from deck import card
 import deck
 import balance
+import packet
+import threading
+import logging
 
-# acknowledge game start
-print("Starting game...")
+# initialize logging
+log = logging.getLogger("main")
+log.info("Starting game...")
 
-print(balance.create_balance("Connor", "easy"))
-print(balance.get_balance("Connor"))
+# 
