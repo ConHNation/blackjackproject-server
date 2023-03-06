@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "blackjackproject"
+name = "Blackjack - Computer Science Principals Final Project"
 version = "0.1.0"
-description = ""
-authors = ["Replit user <<>>"]
+description = "A game designed to play blackjack with other users on seperate devices or with a CPU. This was made as the final project for a Computer Science Principles class, made by the authors listed below."
+authors = ["Connor Hayden", "Dylan Lovell", "Mateus Rudzki", "Lance Hinojosa"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
