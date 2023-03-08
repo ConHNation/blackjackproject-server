@@ -13,7 +13,3 @@ import logging
 # initialize logging
 log = logging.getLogger("main")
 log.info("Starting game...")
-
-# 
-for x in deck.newdeck(2):
-	print(x)
