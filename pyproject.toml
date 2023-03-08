@@ -6,7 +6,6 @@ authors = ["Connor Hayden", "Dylan Lovell", "Mateus Rudzki", "Lance Hinojosa"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-random2 = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 

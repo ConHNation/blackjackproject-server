@@ -8,8 +8,8 @@ import tkinter as tk
 
 # config
 server = None
-HOST_ADDR = "127.0.0.1"
-HOST_PORT = 420
+HOST_ADDR = "panel.simp4.me"
+HOST_PORT = 1250
 
 # initialize logger
 log = logging.getLogger("Packet Manager")
@@ -34,7 +34,7 @@ header.pack(side=tk.TOP, pady=(5, 0))
 
 # function to start server
 def start_server(name):
-	global HOST_PORT, HOST_ADDR, log
+	global HOST_PORT, HOST_ADDR, log, server
 
 	# sets server object
 	log.debug("Creating server socket object.")
