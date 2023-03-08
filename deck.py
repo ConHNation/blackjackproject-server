@@ -2,10 +2,14 @@
 
 # requirements
 from random import shuffle
+import logging
+import threading
 # all possible cards
 allcardnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 allcardtypes = ["♠", "♣", "♦", "♥"]
 
+# logger
+log = logging.getLogger("Deck Manager")
 
 # card class - this allows me to make the cards python objects, which makes them easier to compare and reduces errors
 class card:
@@ -28,9 +32,13 @@ class TooManyDecksError(Exception):
     pass
 
 # generates the deck
-def newdeck(num):
-	if not num.isdigit():
-		return TypeError
+def newdeck(num: int):
+	global log
+	log.info("Generating new deck...")
+	if type(num) != int:
+		log.error("TypeError: newdeck function was given a non-integer, but requires an integer to prevent errors.")
+		raise TypeError("newdeck function was given a non-integer, but requires an integer to prevent errors.")
+		return None
 	if int(num) > 8 or int(num) <= 0:
 		return TooManyDecksError
 	else:

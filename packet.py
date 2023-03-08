@@ -56,4 +56,5 @@ def stop_server():
 	pass
 
 # keeps window open
-panel.mainloop()
+paneldisplaythread = threading.Thread(target=panel.mainloop)
+paneldisplaythread.start()
